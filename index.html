@@ -7,21 +7,19 @@
   <title>Formulario</title>
 </head>
 <body>
-  <h1>Formulario</h1>
-  <form action="">
-  Ingresa Nombre:
-  <input type="text" id="nombre" pattern="^[a-zA-Z ]*$" required/><br /><br/>
-  Ingresa Apellido:
-  <input type="text" id="apellido" pattern="^[a-zA-Z ]*$" required/><br /><br />
-  Ingresa Dni:
-  <input type="number" id="dni" pattern="[0-9]{8}" required/><br><br />
-  Ingresa Direccion:
-  <input type="text" id="direccion" pattern="[0-9]{8}" required/><br><br />
-  <input type="submit"  onclick="EnviarDatos()" value="EnviarDatos"/>
-
-  <div id="enviar"></div>
-
+  <form action="" onsubmit="enviardatos();return false;">
+    <h1>Formulario</h1>
+    Ingresa Nombre:
+    <input type="text" id="nombre" pattern="[A-ZÑÁ-Úa-zñá-ú\s]{1,}" required/><br/><br/>
+    Ingresa Apellido:
+    <input type="text" id="apellido" pattern="[A-ZÑÁ-Úa-zñá-ú\s]{1,}" required/><br/><br />
+    Ingresa Dni     :
+    <input type="tel" id="dni" pattern="[0-9]{8}" required/><br><br/>
+    Ingresa Direccion:
+    <input type="text" id="direccion" required/><br><br/></br>
+    <button type="submit" id="boton">EnviarDatos</button>
+    <div id="enviar"></div>
+  </form>
   <script src="assets\js\main.js"></script>
-</form>
 </body>
 </html>
